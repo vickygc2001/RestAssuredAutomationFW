@@ -19,15 +19,15 @@ public class ConfigManager2 {
 		
 		//Using arrow function in switch. Feature of Jave version 14
 		switch(env) {
-		case "dev" -> path = "config/config.dev.properties";
+			case "dev" -> path = "config/config.dev.properties";
+					
+			
+			case "qa" -> path = "config/config.qa.properties";
 				
-		
-		case "qa" -> path = "config/config.qa.properties";
 			
-		
-		case "uat" -> path = "config/config.uat.properties";
-			
-		default -> path = "config/config.qa.properties";			
+			case "uat" -> path = "config/config.uat.properties";
+				
+			default -> path = "config/config.qa.properties";			
 		}
 		
 		

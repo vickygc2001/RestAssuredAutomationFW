@@ -19,6 +19,11 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 //NOTE : RESTASSURED is a UTILITY CLASS, and we use static keyword to access the methods directly
 //import io.restassured.RestAssured;
 
+
+//NOTE : To run a particular test from maven in QA env
+
+// > mvn test -Dtest=LoginAPITest -Denv=qa
+
 public class LoginAPITest {
 	
 	
@@ -52,9 +57,7 @@ public class LoginAPITest {
 				.and()
 				.body(JsonSchemaValidator.matchesJsonSchemaInClasspath("responseSchema/loginAPIResponseSchema.json"))
 				;
-				
-				
-		
+						
 	}
 
 }
